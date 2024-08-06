@@ -1,0 +1,21 @@
+//EXception Handling1
+class Arithexce
+{
+	public static void main(String args[])
+	{
+		int a=5,b=5,c=5,d;
+		try
+		{
+			d=a/(b-c);
+			System.out.println("a="+a+" b="+b+" c="+c+" d="+d);
+		}
+		catch(ArithmeticException e)
+		{
+			System.out.println("Division by zero error");
+			System.out.println("change the values");
+			b=6;
+			d=a/(b-c);
+		}
+		System.out.println("a="+a+" b="+b+" c="+c+" d="+d);
+	}
+}
