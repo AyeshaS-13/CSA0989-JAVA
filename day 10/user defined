@@ -1,0 +1,35 @@
+//user defined Exception                                                                                                                                                                                                              class IllegalMarkException extends Exception
+{
+}
+class test
+{
+	int mark;
+	public test(int m)
+	{
+		mark=m;
+	}
+	void display()throws IllegalMarkException
+	{
+		if((mark<0)||(mark>100))throw new IllegalMarkException();
+		System.out.println("Mark="+mark);
+	}
+}
+class markTest
+{
+	public static void main(String args[])
+	{
+		test t=new test(101);
+		try
+		{
+			t.display();
+		}
+		catch(IllegalMarkException e)
+		{
+			System.out.println("Illegal Mark: caught in main");
+		}
+		finally
+		{
+			System.out.println("End of the Program");
+		}
+	}
+}
